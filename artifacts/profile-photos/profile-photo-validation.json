@@ -1,0 +1,217 @@
+{
+  "status": "Exploratory palette set; color combinations are not approved brand standards.",
+  "structure": "<platform>/<theme>/<platform-specific PNG>",
+  "wordmarkSource": "../wordmark/onera-wordmark-white.svg",
+  "wordmarkWidthPercent": 70,
+  "platforms": [
+    {
+      "slug": "instagram",
+      "size": 1080
+    },
+    {
+      "slug": "threads",
+      "size": 1080
+    },
+    {
+      "slug": "facebook",
+      "size": 1024
+    },
+    {
+      "slug": "pinterest",
+      "size": 1000
+    },
+    {
+      "slug": "linkedin",
+      "size": 800
+    },
+    {
+      "slug": "youtube",
+      "size": 800
+    },
+    {
+      "slug": "tiktok",
+      "size": 720
+    },
+    {
+      "slug": "x",
+      "size": 400
+    }
+  ],
+  "palettes": [
+    {
+      "theme": "light",
+      "slug": "white-olive",
+      "label": "White / Olive",
+      "background": "#FFFFFF",
+      "foreground": "#413E07",
+      "contrastRatio": 10.96
+    },
+    {
+      "theme": "light",
+      "slug": "alabaster-charcoal",
+      "label": "Alabaster / Charcoal",
+      "background": "#F7F6F2",
+      "foreground": "#262521",
+      "contrastRatio": 14.19
+    },
+    {
+      "theme": "light",
+      "slug": "lavender-olive",
+      "label": "Lavender / Olive",
+      "background": "#D8D0E6",
+      "foreground": "#413E07",
+      "contrastRatio": 7.35
+    },
+    {
+      "theme": "light",
+      "slug": "sage-forest",
+      "label": "Sage / Forest",
+      "background": "#BCC5B2",
+      "foreground": "#294638",
+      "contrastRatio": 5.8
+    },
+    {
+      "theme": "light",
+      "slug": "blush-plum",
+      "label": "Blush / Plum",
+      "background": "#E8CFC7",
+      "foreground": "#663A45",
+      "contrastRatio": 6.29
+    },
+    {
+      "theme": "dark",
+      "slug": "black-white",
+      "label": "Black / White",
+      "background": "#000000",
+      "foreground": "#FFFFFF",
+      "contrastRatio": 21
+    },
+    {
+      "theme": "dark",
+      "slug": "olive-white",
+      "label": "Olive / White",
+      "background": "#413E07",
+      "foreground": "#FFFFFF",
+      "contrastRatio": 10.96
+    },
+    {
+      "theme": "dark",
+      "slug": "charcoal-alabaster",
+      "label": "Charcoal / Alabaster",
+      "background": "#262521",
+      "foreground": "#F7F6F2",
+      "contrastRatio": 14.19
+    },
+    {
+      "theme": "dark",
+      "slug": "plum-parchment",
+      "label": "Plum / Parchment",
+      "background": "#663A45",
+      "foreground": "#F1E9D9",
+      "contrastRatio": 7.71
+    },
+    {
+      "theme": "dark",
+      "slug": "terracotta-cream",
+      "label": "Terracotta / Cream",
+      "background": "#B66D52",
+      "foreground": "#FFF5E7",
+      "contrastRatio": 3.67
+    }
+  ],
+  "files": [
+    "_masters/light/onera-profile-master-light-white-olive-2048.png",
+    "instagram/light/onera-profile-instagram-light-white-olive-1080.png",
+    "threads/light/onera-profile-threads-light-white-olive-1080.png",
+    "facebook/light/onera-profile-facebook-light-white-olive-1024.png",
+    "pinterest/light/onera-profile-pinterest-light-white-olive-1000.png",
+    "linkedin/light/onera-profile-linkedin-light-white-olive-800.png",
+    "youtube/light/onera-profile-youtube-light-white-olive-800.png",
+    "tiktok/light/onera-profile-tiktok-light-white-olive-720.png",
+    "x/light/onera-profile-x-light-white-olive-400.png",
+    "_masters/light/onera-profile-master-light-alabaster-charcoal-2048.png",
+    "instagram/light/onera-profile-instagram-light-alabaster-charcoal-1080.png",
+    "threads/light/onera-profile-threads-light-alabaster-charcoal-1080.png",
+    "facebook/light/onera-profile-facebook-light-alabaster-charcoal-1024.png",
+    "pinterest/light/onera-profile-pinterest-light-alabaster-charcoal-1000.png",
+    "linkedin/light/onera-profile-linkedin-light-alabaster-charcoal-800.png",
+    "youtube/light/onera-profile-youtube-light-alabaster-charcoal-800.png",
+    "tiktok/light/onera-profile-tiktok-light-alabaster-charcoal-720.png",
+    "x/light/onera-profile-x-light-alabaster-charcoal-400.png",
+    "_masters/light/onera-profile-master-light-lavender-olive-2048.png",
+    "instagram/light/onera-profile-instagram-light-lavender-olive-1080.png",
+    "threads/light/onera-profile-threads-light-lavender-olive-1080.png",
+    "facebook/light/onera-profile-facebook-light-lavender-olive-1024.png",
+    "pinterest/light/onera-profile-pinterest-light-lavender-olive-1000.png",
+    "linkedin/light/onera-profile-linkedin-light-lavender-olive-800.png",
+    "youtube/light/onera-profile-youtube-light-lavender-olive-800.png",
+    "tiktok/light/onera-profile-tiktok-light-lavender-olive-720.png",
+    "x/light/onera-profile-x-light-lavender-olive-400.png",
+    "_masters/light/onera-profile-master-light-sage-forest-2048.png",
+    "instagram/light/onera-profile-instagram-light-sage-forest-1080.png",
+    "threads/light/onera-profile-threads-light-sage-forest-1080.png",
+    "facebook/light/onera-profile-facebook-light-sage-forest-1024.png",
+    "pinterest/light/onera-profile-pinterest-light-sage-forest-1000.png",
+    "linkedin/light/onera-profile-linkedin-light-sage-forest-800.png",
+    "youtube/light/onera-profile-youtube-light-sage-forest-800.png",
+    "tiktok/light/onera-profile-tiktok-light-sage-forest-720.png",
+    "x/light/onera-profile-x-light-sage-forest-400.png",
+    "_masters/light/onera-profile-master-light-blush-plum-2048.png",
+    "instagram/light/onera-profile-instagram-light-blush-plum-1080.png",
+    "threads/light/onera-profile-threads-light-blush-plum-1080.png",
+    "facebook/light/onera-profile-facebook-light-blush-plum-1024.png",
+    "pinterest/light/onera-profile-pinterest-light-blush-plum-1000.png",
+    "linkedin/light/onera-profile-linkedin-light-blush-plum-800.png",
+    "youtube/light/onera-profile-youtube-light-blush-plum-800.png",
+    "tiktok/light/onera-profile-tiktok-light-blush-plum-720.png",
+    "x/light/onera-profile-x-light-blush-plum-400.png",
+    "_masters/dark/onera-profile-master-dark-black-white-2048.png",
+    "instagram/dark/onera-profile-instagram-dark-black-white-1080.png",
+    "threads/dark/onera-profile-threads-dark-black-white-1080.png",
+    "facebook/dark/onera-profile-facebook-dark-black-white-1024.png",
+    "pinterest/dark/onera-profile-pinterest-dark-black-white-1000.png",
+    "linkedin/dark/onera-profile-linkedin-dark-black-white-800.png",
+    "youtube/dark/onera-profile-youtube-dark-black-white-800.png",
+    "tiktok/dark/onera-profile-tiktok-dark-black-white-720.png",
+    "x/dark/onera-profile-x-dark-black-white-400.png",
+    "_masters/dark/onera-profile-master-dark-olive-white-2048.png",
+    "instagram/dark/onera-profile-instagram-dark-olive-white-1080.png",
+    "threads/dark/onera-profile-threads-dark-olive-white-1080.png",
+    "facebook/dark/onera-profile-facebook-dark-olive-white-1024.png",
+    "pinterest/dark/onera-profile-pinterest-dark-olive-white-1000.png",
+    "linkedin/dark/onera-profile-linkedin-dark-olive-white-800.png",
+    "youtube/dark/onera-profile-youtube-dark-olive-white-800.png",
+    "tiktok/dark/onera-profile-tiktok-dark-olive-white-720.png",
+    "x/dark/onera-profile-x-dark-olive-white-400.png",
+    "_masters/dark/onera-profile-master-dark-charcoal-alabaster-2048.png",
+    "instagram/dark/onera-profile-instagram-dark-charcoal-alabaster-1080.png",
+    "threads/dark/onera-profile-threads-dark-charcoal-alabaster-1080.png",
+    "facebook/dark/onera-profile-facebook-dark-charcoal-alabaster-1024.png",
+    "pinterest/dark/onera-profile-pinterest-dark-charcoal-alabaster-1000.png",
+    "linkedin/dark/onera-profile-linkedin-dark-charcoal-alabaster-800.png",
+    "youtube/dark/onera-profile-youtube-dark-charcoal-alabaster-800.png",
+    "tiktok/dark/onera-profile-tiktok-dark-charcoal-alabaster-720.png",
+    "x/dark/onera-profile-x-dark-charcoal-alabaster-400.png",
+    "_masters/dark/onera-profile-master-dark-plum-parchment-2048.png",
+    "instagram/dark/onera-profile-instagram-dark-plum-parchment-1080.png",
+    "threads/dark/onera-profile-threads-dark-plum-parchment-1080.png",
+    "facebook/dark/onera-profile-facebook-dark-plum-parchment-1024.png",
+    "pinterest/dark/onera-profile-pinterest-dark-plum-parchment-1000.png",
+    "linkedin/dark/onera-profile-linkedin-dark-plum-parchment-800.png",
+    "youtube/dark/onera-profile-youtube-dark-plum-parchment-800.png",
+    "tiktok/dark/onera-profile-tiktok-dark-plum-parchment-720.png",
+    "x/dark/onera-profile-x-dark-plum-parchment-400.png",
+    "_masters/dark/onera-profile-master-dark-terracotta-cream-2048.png",
+    "instagram/dark/onera-profile-instagram-dark-terracotta-cream-1080.png",
+    "threads/dark/onera-profile-threads-dark-terracotta-cream-1080.png",
+    "facebook/dark/onera-profile-facebook-dark-terracotta-cream-1024.png",
+    "pinterest/dark/onera-profile-pinterest-dark-terracotta-cream-1000.png",
+    "linkedin/dark/onera-profile-linkedin-dark-terracotta-cream-800.png",
+    "youtube/dark/onera-profile-youtube-dark-terracotta-cream-800.png",
+    "tiktok/dark/onera-profile-tiktok-dark-terracotta-cream-720.png",
+    "x/dark/onera-profile-x-dark-terracotta-cream-400.png"
+  ],
+  "proof": "_proofs/onera-profile-color-study.png",
+  "totalUploadFiles": 80,
+  "totalMasterFiles": 10
+}

@@ -1,0 +1,176 @@
+{
+  "responsiveChecks": [
+    {
+      "active": null,
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/",
+      "width": 320
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/collections/",
+      "width": 320
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/collections/the-gate-of-horn/",
+      "width": 320
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/garments/nyx-overcoat/",
+      "width": 320
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/garments/hypnos-dress/",
+      "width": 320
+    },
+    {
+      "active": "Philosophy",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/philosophy/",
+      "width": 320
+    },
+    {
+      "active": null,
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/",
+      "width": 767
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/collections/",
+      "width": 767
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/collections/the-gate-of-horn/",
+      "width": 767
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/garments/nyx-overcoat/",
+      "width": 767
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/garments/hypnos-dress/",
+      "width": 767
+    },
+    {
+      "active": "Philosophy",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/philosophy/",
+      "width": 767
+    },
+    {
+      "active": null,
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/",
+      "width": 1440
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/collections/",
+      "width": 1440
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/collections/the-gate-of-horn/",
+      "width": 1440
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/garments/nyx-overcoat/",
+      "width": 1440
+    },
+    {
+      "active": "Collections",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/garments/hypnos-dress/",
+      "width": 1440
+    },
+    {
+      "active": "Philosophy",
+      "brokenImages": 0,
+      "header": 1,
+      "headings": 1,
+      "overflow": false,
+      "route": "/philosophy/",
+      "width": 1440
+    }
+  ],
+  "verifiedInteractions": [
+    "Collection index to collection to Nyx Overcoat to Hypnos Dress and return to collection",
+    "Color and size radio keyboard selection",
+    "Size guide open, Escape close, and focus return",
+    "Photo viewer open, zoom, Escape close, scroll and focus restoration",
+    "320px header correction verified without document overflow"
+  ],
+  "notes": [
+    "Touch swipe implementation was not exercised with a physical touch device."
+  ]
+}

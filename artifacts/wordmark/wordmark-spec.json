@@ -1,0 +1,60 @@
+{
+  "wordmark": "Onéra",
+  "sourceComponent": "C:/Users/chris/Onéra/src/components/wordmark.tsx",
+  "fontAsset": "Z:\\onera\\web-app-onera\\dist\\_next\\static\\media\\01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2",
+  "fontFamily": "Cormorant Garamond",
+  "weight": 300,
+  "trackingEm": 0.12,
+  "kerning": true,
+  "fontDependenciesInSvg": false,
+  "background": "transparent",
+  "unitsPerEm": 1000,
+  "inkBounds": {
+    "left": 49,
+    "bottom": -12,
+    "right": 2927.5714285714284,
+    "top": 731.0
+  },
+  "viewBox": [
+    0,
+    0,
+    3006.5714285714284,
+    871.0
+  ],
+  "glyphs": [
+    {
+      "glyph": "O",
+      "x": 0,
+      "y": 0,
+      "advance": 766
+    },
+    {
+      "glyph": "n",
+      "x": 886.0,
+      "y": 0,
+      "advance": 515
+    },
+    {
+      "glyph": "eacute",
+      "x": 1521.0,
+      "y": 0,
+      "advance": 405
+    },
+    {
+      "glyph": "r",
+      "x": 2046.0,
+      "y": 0,
+      "advance": 342
+    },
+    {
+      "glyph": "a",
+      "x": 2508.0,
+      "y": 0,
+      "advance": 419
+    }
+  ],
+  "variants": {
+    "onera-wordmark": "#413E07",
+    "onera-wordmark-white": "#FFFFFF"
+  }
+}

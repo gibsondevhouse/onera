@@ -1,0 +1,108 @@
+{
+  "source": "Local Onéra website snapshot",
+  "fontAsset": "z:\\onera\\web-app-onera\\dist\\_next\\static\\media\\01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2",
+  "wordmark": "Onéra",
+  "fontFamily": "Cormorant Garamond",
+  "fontWeight": 300,
+  "letterSpacing": ".12em",
+  "dimensions": [
+    3000,
+    3000
+  ],
+  "density": 300,
+  "layout": "3 columns × 3 rows, no gutters, visually centered identical wordmarks",
+  "palette": [
+    {
+      "background": "#FFFFFF",
+      "foreground": "#413E07"
+    },
+    {
+      "background": "#413E07",
+      "foreground": "#FFFFFF"
+    },
+    {
+      "background": "#D8D0E6",
+      "foreground": "#413E07"
+    },
+    {
+      "background": "#F7F6F2",
+      "foreground": "#262521"
+    },
+    {
+      "background": "#262521",
+      "foreground": "#F7F6F2"
+    },
+    {
+      "background": "#BCC5B2",
+      "foreground": "#294638"
+    },
+    {
+      "background": "#663A45",
+      "foreground": "#F1E9D9"
+    },
+    {
+      "background": "#E8CFC7",
+      "foreground": "#663A45"
+    },
+    {
+      "background": "#B66D52",
+      "foreground": "#FFF5E7"
+    }
+  ],
+  "inkBounds": [
+    {
+      "x": 182.62002563476562,
+      "y": 418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 1182.6200256347656,
+      "y": 418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 2182.6200256347656,
+      "y": 418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 182.62002563476562,
+      "y": 1418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 1182.6200256347656,
+      "y": 1418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 2182.6200256347656,
+      "y": 1418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 182.62002563476562,
+      "y": 2418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 1182.6200256347656,
+      "y": 2418,
+      "width": 634.7599487304688,
+      "height": 164
+    },
+    {
+      "x": 2182.6200256347656,
+      "y": 2418,
+      "width": 634.7599487304688,
+      "height": 164
+    }
+  ]
+}

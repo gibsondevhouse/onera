@@ -1,0 +1,17 @@
+# Google Drive / Docs shortcuts
+*.gdoc
+*.gsheet
+*.gslides
+
+# Retired preview archives
+artifacts/retired-preview/*.zip
+
+# OS & editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies & local environment
+node_modules/
+.env
+.env.*
