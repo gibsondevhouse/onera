@@ -37,6 +37,15 @@ This is our working space for building Onéra's brand identity and engineering i
 
 The Next.js app is the sole development target. The former static preview has no active backlog or required migration. Hosting and sharing will support the application that is built.
 
+## Home page reference (Ziva Lagos study)
+
+| Document | Focus |
+| --- | --- |
+| [01. Ziva Lagos UI audit](homepage-reference/01-zivalagos-ui-audit.md) | Measured structure, tokens, components, responsive behaviour and findings for zivalagos.com |
+| [02. Home page clone guide](homepage-reference/02-homepage-clone-guide.md) | Blueprint, component specs, build order and QA for rebuilding the Onéra home page on that structure in dark mode |
+| [03. Token mapping](homepage-reference/03-token-mapping.md) | Every Ziva token translated to Onéra dark-mode values with contrast checks and ready-to-paste CSS |
+| [Reference captures](../artifacts/reference/zivalagos/README.md) | Full-page native captures (desktop 1440, mobile 390), stitched pane captures, viewport frames and capture tools (reference only) |
+
 ## How to use this space
 
 Start with the brand foundation, then develop the visual and verbal identity together. Record settled choices in the decision log and update the relevant guide.

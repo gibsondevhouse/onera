@@ -4,7 +4,7 @@
 
 **Status:** Planned — implementation not started  
 **Goal:** Deliver the selected full atmospheric motion direction, including smooth scrolling and a custom cursor, while keeping navigation and controls responsive.  
-**Planning baseline:** October 24, 2026. This document describes proposed work; it does not certify implemented behavior.
+**Planning baseline:** November 8, 2026. This document describes proposed work; it does not certify implemented behavior.
 
 ## 1. Decisions and prerequisites
 
@@ -12,30 +12,29 @@ Use the shared [decisions and inputs](../decisions-and-inputs.md), [content and 
 
 | Input | Required before | Work that may proceed without it |
 | --- | --- | --- |
-| **D01: Confirmed** — Next.js is the sole application | Implementation uses the application's recorded working directory | Preparing the Next.js work packages below |
+| **D01: Confirmed** — rebuilt Next.js app is in `website/` | Implementation uses the repository's canonical application directory | Preparing the Next.js work packages below |
 | [Phase 00 application baseline](../phase-00-consolidation.md) complete | Implementing this phase against a verified application baseline | Auditing current interactions and lifecycle contracts |
 | **D05: Confirmed** — full atmospheric motion, smooth scrolling, and custom cursor | Timing and visual review of the selected work | Lifecycle and fallback design |
-| **D04: Confirmed alabaster**; Phase 01 typography and focus acceptance still pending | Final visual review | Lifecycle and fallback design |
+| **D04: Confirmed dark-only theme**; exact Phase 01 palette, typography, and focus acceptance still pending | Final visual review | Lifecycle and fallback design |
 | **D06: Runtime follows application requirements** | Release hosting compatibility review | Core application implementation and runtime checks |
 | Approved video, poster, rights, placement, and encoding budget in the asset register | Adding any video source or download | Keeping the existing hero image |
 | Approved interactive targets and labels | Enabling cursor labels | Auditing existing links and gallery controls |
 
-Build the motion system in the sole Next.js application. The preview app is retired from development. D01 and D05 are settled and no longer block implementation planning. Ambient video remains conditional on approved assets; its absence does not block completion of the selected motion system. Under D02, omit unconfirmed claims and imagery; do not invent footage or a broken placeholder URL.
+Build the motion system in the sole Next.js application at `website/`. D01 and D05 are settled and no longer block implementation planning. Ambient video remains conditional on approved assets; its absence does not block completion of the selected motion system. Under D02, omit unconfirmed claims and imagery; do not invent footage or a broken placeholder URL.
 
 ## 2. Existing application behavior
 
-- The Next.js app already has a pathname-aware `MotionProvider`, Lenis/GSAP cleanup, focused-content reveals, and an overlay event that stops and starts Lenis.
-- Its `TonalCursor` is restricted by pointer and motion preferences, follows `[data-cursor]` targets, and removes listeners when its pathname effect is cleaned up.
-- Server-rendered content remains available when motion cannot initialize. Preserve that readable baseline.
-- No ambient video is currently supplied in the application's public assets. Existing hero photography is the fallback.
+- The replacement app has no JavaScript motion provider, custom cursor, overlays, or video yet.
+- Server-rendered pages currently remain readable without JavaScript; preserve this baseline as motion is added.
+- No approved ambient video or garment photography is available in the new app. The homepage's CSS artwork is decorative, not a product image.
 
 Recheck these facts immediately before implementation. Phase 00 establishes the application baseline; this phase extends it. Build the runtime required by the application. Sites hosting compatibility may be evaluated for release without blocking core motion work or requiring another app or static export.
 
 ## 3. Target file map
 
-Paths for proposed files are planning names; create them only when the corresponding module is selected.
+Paths are relative to `website/`. Proposed files are planning names; create them only when the corresponding module is selected.
 
-| Application target beneath `C:\Users\chris\Onéra\` | Planned responsibility after Phase 00 |
+| Application target beneath `website/` | Planned responsibility after Phase 00 |
 | --- | --- |
 | `src/components/motion-provider.tsx` | Tune existing Lenis/GSAP behavior while retaining setup, scope, and teardown |
 | `src/components/tonal-cursor.tsx` | Weighted pointer interpolation and cursor lifecycle |
@@ -181,4 +180,4 @@ Run the Next.js application's existing typecheck, tests, build, and relevant bro
 
 **Exit evidence to complete:** Phase 00 acceptance; D05 implementation record; smooth-scroll/cursor/reveal/fade behavior in the running application and built runtime; build identity; final timings; approved asset IDs or deferred-media decision; changed files; command results; browser/viewport evidence; performance trace; reviewer and date.
 
-**Current exit state:** Not started. D01 confirms Next.js as the sole application; D04 alabaster and D05 full atmospheric motion are confirmed. D06 makes runtime follow application requirements. Conditional video may remain deferred without invented assets; selected motion work with missing evidence remains incomplete.
+**Current exit state:** Not started. D01 confirms Next.js as the sole application; D04 dark-only theme and D05 full atmospheric motion are confirmed. D06 makes runtime follow application requirements. Conditional video may remain deferred without invented assets; selected motion work with missing evidence remains incomplete.

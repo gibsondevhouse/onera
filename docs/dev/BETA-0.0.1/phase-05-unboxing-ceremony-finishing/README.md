@@ -7,14 +7,14 @@
 
 ## 1. Scope and entry gates
 
-Phase 05 follows [Phase 00 application baseline](../phase-00-consolidation.md) and Phases 01–04. The user confirmed Next.js as the sole application. Verify the website built in that application, with no required preview migration or second implementation.
+Phase 05 follows [Phase 00 application baseline](../phase-00-consolidation.md) and Phases 01–04. The rebuilt Next.js app in `website/` is the sole application. Verify it directly, with no required preview migration or second implementation.
 
 | Dependency | Required input |
 | --- | --- |
 | D01 — website foundation | Next.js is the sole application, confirmed by the user |
 | D02 — unconfirmed content | Omit until the real details are supplied |
 | D03 — form workflow | Verify “Demo complete. Nothing was sent.” with no sending or persistence |
-| D04 / D05 | Alabaster palette and full atmospheric motion, including accessible fallbacks |
+| D04 / D05 | Dark-only palette and full atmospheric motion, including accessible fallbacks |
 | D06 — delivery | Choose a compatible runtime for the application's needs; no required static export or second app |
 | Phases 01–03 | Agreed tokens, garment layout, image behavior, motion and reduced-motion rules |
 | Phase 04 | Shared demo inquiry states and any in-scope selection / checkout presentation |
@@ -24,7 +24,7 @@ Do not resolve a missing input by inventing a product specification, service ben
 
 ## 2. Existing and proposed file map
 
-The active implementation root is `C:\Users\chris\Onéra`. Read its `AGENTS.md` and current framework guidance before implementation. These paths are relative to that checkout.
+The active implementation root is `website/`. Read its `AGENTS.md` and current framework guidance before implementation. These paths are relative to that checkout.
 
 | Existing Next.js source | Responsibility |
 | --- | --- |
@@ -170,16 +170,15 @@ Deliverable: reproducible application build / runtime instructions and a concret
 
 ## 10. Work package 5.8 — Application checks and completion record
 
-Read the current package scripts and test prerequisites in the Next.js checkout. Run applicable checks after implementation:
+Read the current package scripts and test prerequisites in the `website/` app. Run applicable checks after implementation:
 
-```powershell
-npm run typecheck
-npm test
-npm run build
-npm run test:browser
+```sh
+npm --prefix website run typecheck
+npm --prefix website run lint
+npm --prefix website run build
 ```
 
-Record actual command results and any unmet environment requirement. Do not introduce credentials or claim live integrations merely to close a local check.
+Add focused unit/browser checks as feature work introduces them. Record actual command results and unmet environment requirements. Do not introduce credentials or claim live integrations merely to close a local check.
 
 - Verify route-level content and production-build rendering, including populated and absent packaging / care data.
 - If CMS fields changed, verify schema compatibility and missing / populated states. Record any migration or publication work separately.

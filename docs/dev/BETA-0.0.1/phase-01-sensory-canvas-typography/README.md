@@ -2,10 +2,11 @@
 
 [← Stage BETA-0.0.1](../stage-BETA-0.0.1.md) | [DevPlan Master](../../README.md)
 
-**Status:** Planned — implementation not started.  
-**Goal:** Establish Onéra's alabaster canvas and a readable editorial hierarchy in the application that will become the real website.
+**Status:** In progress — initial dark shell implemented; palette contrast and full-route coverage remain to be verified.
 
-The confirmed application target is Next.js at `C:\Users\chris\Onéra`. Build the website it needs, using the [recorded decisions](../decisions-and-inputs.md). Implementation has not started.
+**Goal:** Establish Onéra's dark-only visual direction and a readable editorial hierarchy in the application that will become the real website.
+
+The rebuilt Next.js app is at `website/` in this repository. Implement the confirmed dark-only direction there, using the [recorded decisions](../decisions-and-inputs.md).
 
 ## 1. Prerequisites and selected direction
 
@@ -14,10 +15,13 @@ Read [Phase 00: source baseline](../phase-00-consolidation.md), [decisions and i
 | Input or dependency | Planning state | Consequence |
 | --- | --- | --- |
 | Primary application | Next.js confirmed by user | Implement directly in the sole application. |
-| Source baseline | Phase 00 planned | Inspect current components and record the starting revision before changing shared type and surfaces. |
-| Canvas | User selected Alabaster `#F7F6F2` | Use it as the base paper token; review elevated and tinted surfaces against it. |
+| Source baseline | Phase 00 in progress | The app has been scaffolded; finish the full content/route inventory and record its baseline before expanding shared surfaces. |
+| Theme | User confirmed dark-only on November 8, 2026 | Build one dark visual system; do not add a theme toggle or system-preference switching. |
+| Surface palette | Initial colors implemented; contrast review pending | Validate semantic background, text, elevated, muted, line, accent, and focus tokens before accepting them across routes. |
+| Brand accent | Olive `#413E07` and existing wordmark remain confirmed | Retain olive where contrast and visual hierarchy support it; protect wordmark geometry and verify its treatment on the selected dark surface. |
 | Wordmark | Existing geometry is the baseline | Preserve glyphs, accent, tracking, and proportions; a redesign requires a separate recorded decision. |
 | Atmospheric motion | User selected the full treatment | Coordinate typography and surface changes with Phase 03; keep content readable during and without animation. |
+| Storefront reference | Client selected Ziva Lagos as a layout reference | Use its announcement/masthead/editorial merchandising rhythm as structural inspiration only; do not copy its branding, assets, claims, or promotional content. Onéra's dark-only palette remains controlling. |
 | Unverified facts | User selected omission | Typography must not introduce or promote unsupported garment or production claims. |
 | True italic and numeric features | Exact font support needs inspection | Load the intended style and enable only supported features. |
 
@@ -25,65 +29,65 @@ Phase 01 supplies foundations for Phase 02 and Phase 03. Shared CSS changes need
 
 ## 2. Verified source baseline
 
-The source review on October 24, 2026 found:
+The initial replacement-app review on November 8, 2026 found:
 
-- `src/app/layout.tsx` applies `bg-white`, display and utility font variables, the skip link, header, footer, and application providers.
-- `src/app/globals.css` contains the olive token and shared accessibility/reduced-motion styles; it does not currently define a paper color token.
-- `src/app/fonts.ts` uses Cormorant Garamond and Manrope through `next/font/google`. The current Cormorant configuration does not explicitly request italic.
-- `tailwind.config.ts` maps display type to `--font-display` and sans type to `--font-ui`.
+- `website/src/app/layout.tsx` provides metadata, a skip link, the shared header/footer, and Cormorant Garamond and Manrope through `next/font/google`.
+- `website/src/app/globals.css` defines the dark-only palette and responsive shared surfaces. It does not contain a light-theme or `prefers-color-scheme` palette switch.
+- The palette currently uses background `#14140F`, raised surfaces `#1D1C15` / `#252319`, text `#F7F6F2`, muted text `#C3C0B4`, line `#454336`, focus `#F1E9D9`, and olive `#413E07` for the primary action.
+- The replacement uses Tailwind CSS 4's CSS-first setup; there is no `tailwind.config.ts`.
+- The new app uses the supplied white vector wordmark. No original font files or garment photography survived in the repository.
 
 Recheck the application source after Phase 00. Earlier screenshots and QA records describe an earlier revision and do not prove that new work has passed.
 
 ## 3. Target files and ownership
 
-Paths in this table are relative to the application root, `C:\Users\chris\Onéra`.
+Paths in this table are relative to the application root, `website/`.
 
 | File | State at review | Planned responsibility |
 | --- | --- | --- |
-| `src/app/globals.css` | Existing | Semantic canvas tokens, editorial utilities, and shared surface rules. |
-| `src/app/fonts.ts` | Existing | Correct normal/italic font loading and consistent variable names. |
-| `src/app/layout.tsx` | Existing | Body canvas and font variables; preserve skip link and providers. |
-| `tailwind.config.ts` | Existing | Token aliases only where needed; preserve the existing utility-font mapping. |
-| `src/components/header.tsx`, `src/components/footer.tsx` | Existing; Phase 00 may revise | Shared shell styling and focus treatments. |
-| `src/components/wordmark.tsx` | Existing | Inspection/protection of canonical mark; no automatic decorative changes. |
-| `src/app/page.tsx` | Existing | Apply editorial hierarchy to the existing homepage content. |
-| Collection and garment route components under `src/app/` | Existing | Apply matching hierarchy and canvas rules to dynamic pages. |
-| `src/app/fonts/` | Proposed new directory, only if local loading is selected | Licensed local font files and their provenance. |
+| `website/src/app/globals.css` | Implemented; review pending | Semantic dark-theme tokens, editorial utilities, and shared surface rules. |
+| `website/src/app/layout.tsx` | Implemented | Dark page background, fonts, skip link, shared shell, and metadata. |
+| `website/src/components/site-header.tsx`, `site-footer.tsx` | Implemented | Shared shell navigation and footer. |
+| `website/src/components/` | Existing wordmark asset only | Preserve the supplied vector mark in `website/public/brand/`; it replaces the unavailable source component. |
+| `website/src/app/page.tsx` | Initial implementation | Editorial hero and house introduction; refine after viewport review. |
+| `website/src/app/collections/`, `website/src/app/philosophy/` | Initial routes | Shared dark system; garment/detail route coverage remains open. |
+| `website/src/app/fonts.ts` | Not created | Font configuration currently lives in `layout.tsx`; extract only if it improves the established structure. |
+| `website/src/app/fonts/` | Proposed only if local font loading is selected | Licensed local font files and their provenance. |
 | `artifacts/beta-0.0.1/phase-01/` in the documentation workspace | Proposed evidence directory | Token map, font inspection, screenshots, and check results. |
 
 Use the [wordmark specification](../../../../artifacts/wordmark/wordmark-spec.json) to protect the existing mark's geometry.
 
-Use the application route components for the six existing URLs:
+Planned route coverage for the rebuilt application:
 
-| URL | Existing application source |
+| URL | Current implementation |
 | --- | --- |
-| `/` | `src/app/page.tsx` |
-| `/collections/` | `src/app/collections/page.tsx` |
-| `/collections/the-gate-of-horn/` | `src/app/collections/[slug]/page.tsx` |
-| Both `/garments/<slug>/` pages | `src/app/garments/[slug]/page.tsx` |
-| `/philosophy/` | `src/app/philosophy/page.tsx` |
+| `/` | `src/app/page.tsx` — implemented |
+| `/collections/` | `src/app/collections/page.tsx` — implemented; no collection/product records yet |
+| `/collections/the-gate-of-horn/` | Not implemented; build only after the collection record and approved media are confirmed |
+| Both `/garments/<slug>/` pages | Not implemented; build only after garment facts and approved imagery are available |
+| `/philosophy/` | `src/app/philosophy/page.tsx` — initial route |
 
 ## 4. Work packages
 
 | Package | Status | Required output |
 | --- | --- | --- |
-| 1.1 Canvas inventory and tokens | Planned | Alabaster token map and affected-surface inventory. |
-| 1.2 Font styles and supported features | Planned; font inspection pending | Verified font loading and deliberate feature choices. |
-| 1.3 Editorial hierarchy | Planned | Reusable styles applied to existing content. |
-| 1.4 Route integration and handoff | Planned | Consistent application routes and evidence for later phases. |
+| 1.1 Surface inventory and tokens | In progress | Initial dark token map and shared shell; contrast results and remaining surfaces pending. |
+| 1.2 Font styles and supported features | In progress | Cormorant Garamond / Manrope loaded; italic face and feature behavior need verification. |
+| 1.3 Editorial hierarchy | In progress | Initial homepage and section hierarchy implemented. |
+| 1.4 Route integration and handoff | Pending | Apply and verify across the completed application route set. |
 
-### 1.1 Canvas inventory and tokens
+### 1.1 Dark surface inventory and tokens
 
 1. Capture existing home, collection, garment, and philosophy surfaces before editing.
 2. Inventory the body, sticky header, skip link, carousel metadata, gallery backdrops, dialogs, borders, and footer. Include hover, focus, selected, loading, and error states.
-3. Define semantic ink, paper, elevated-paper, tinted-paper, and line tokens in authored application CSS. Set base paper to the selected `#F7F6F2`; preserve olive `#413E07` unless separately changed.
-4. Select elevated and tinted values that remain distinguishable from paper. Record the actual values in the evidence rather than leaving contradictory white/alabaster rules.
-5. Replace conflicting `bg-white` classes on intended paper surfaces. Keep reversed artwork and dark-surface text explicit; a search-and-replace of every white value would damage those treatments.
-6. Apply tokens to the shared shell and interactive components. Preserve intentional photography colors and confirmed swatch colors.
+3. Define semantic page-background, text, elevated-surface, muted-surface, line, accent, and focus tokens in authored application CSS. Initial values are listed above; validate their contrast before treating the palette as accepted.
+4. Ensure elevated and muted surfaces remain distinguishable without creating a light-theme surface. Record all values and contrast evidence; retain white only where needed for text, controls, or the wordmark.
+5. Replace conflicting `bg-white` and light-paper classes on visitor-facing interface surfaces. Preserve intentional photography colors and confirmed swatch colors.
+6. Apply tokens consistently to the shared shell and interactive components. Do not implement a theme toggle or `prefers-color-scheme` palette switch.
 7. Inspect the skip link against the header and main content. Keyboard focus must stay visible, and anchor targets must clear the sticky header.
-8. Review forced-color/high-contrast behavior where supported, ensuring borders and controls do not depend on a subtle tint alone.
+8. Review text, icon, control, border, and focus contrast on every dark surface, including hover, focus, selected, disabled, loading, and error states. Review forced-color/high-contrast behavior where supported.
 
-**Fallback:** If an elevated surface fails contrast or separation, use the base paper with a visible border and focus treatment. Do not hold the base canvas hostage to an optional decorative texture.
+**Fallback:** If an elevated surface fails contrast or separation, use the page background with a visible border and focus treatment. Do not hold the base palette hostage to optional decorative texture.
 
 ### 1.2 Font loading and supported OpenType features
 
@@ -125,7 +129,7 @@ Create three narrowly scoped, reusable treatments in authored application styles
 1. Apply shared changes through application components.
 2. Verify the six existing routes and any additional changed routes against the application's actual route inventory.
 3. Check active navigation, breadcrumbs, skip-link destination, and focus styling after header metrics or type sizes change.
-4. Confirm canvas continuity while scrolling and opening existing dialogs. Check focus rings on both paper and reversed surfaces.
+4. Confirm dark-surface continuity while scrolling and opening existing dialogs. Check focus rings on every surface treatment.
 5. Review the shared viewport matrix in [verification](../verification.md), including the `767px`/`768px` breakpoint boundary where relevant.
 6. Save the selected token/font map and shared-file ownership notes for Phase 02 and Phase 03.
 7. Inspect motion-disabled rendering even though full motion is selected: text and page structure must remain readable without reveals or custom cursor effects.

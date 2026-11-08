@@ -7,24 +7,24 @@
 
 ## 1. Scope and entry gates
 
-This phase depends on [Phase 00 application baseline](../phase-00-consolidation.md), Phase 01's visual foundation, Phase 02's garment context, and Phase 03's overlay and motion rules. The user confirmed Next.js as the sole application. Build the needed website directly in that application.
+This phase depends on [Phase 00 application baseline](../phase-00-consolidation.md), Phase 01's visual foundation, Phase 02's garment context, and Phase 03's overlay and motion rules. The rebuilt Next.js app in `website/` is the sole application.
 
 | Decision | Current direction | Effect here |
 | --- | --- | --- |
 | D01 — website foundation | Next.js is the sole application, confirmed by the user | One implementation and acceptance target |
 | D02 — unconfirmed content | Omit until real details are supplied | No invented studios, service availability, delivery benefits or response promises |
 | D03 — form workflow | Complete demo flow; nothing is sent | Local validation and explicit preview result; no email or submission integration |
-| D04 — palette | Alabaster direction confirmed | Use Phase 01's approved surface tokens |
+| D04 — theme | Dark-only direction confirmed | Use Phase 01's approved dark-theme tokens |
 | D05 — motion | Full atmospheric direction confirmed | Use Phase 03's motion and accessible fallback rules |
 | D06 — delivery | Select a compatible delivery route for the application when needed | No static export or second app is required to develop this phase |
 
-The existing Next.js application contains optional commerce code; its current footer does not contain this inquiry section. Add the demo to that application while preserving disabled commerce and the absence of a connected request destination.
+The replacement app has no commerce integration or inquiry form. Add a clearly labeled local demo only when this phase begins; it must not imply a real order, appointment, message, or request destination.
 
 The demo demonstrates an interaction. It must not suggest that an appointment was requested, a swatch was dispatched, or a staff member received the entered details.
 
 ## 2. Existing and proposed file map
 
-The active implementation root is `C:\Users\chris\Onéra`. Read its `AGENTS.md` and current framework guidance before writing code. Existing paths below are relative to that checkout; proposed files are named as code until created.
+The active implementation root is `website/`. Read its `AGENTS.md` and current framework guidance before writing code. Paths below are relative to that app; proposed files are named as code until created.
 
 | Next.js source | Responsibility |
 | --- | --- |
@@ -154,13 +154,12 @@ Use the shared [verification matrix](../verification.md), then record this phase
 
 Run the applicable commands from the Next.js checkout after implementation, using its current scripts:
 
-```powershell
-npm run typecheck
-npm test
-npm run build
-npm run test:browser
+```sh
+npm --prefix website run typecheck
+npm --prefix website run lint
+npm --prefix website run build
 ```
 
-Add meaningful browser coverage for the new state contract and no-transmission behavior. Record any unavailable environment prerequisite honestly. Apply Phase 05's discovered-reference coverage and keep local interaction evidence separate from live-service acceptance.
+The replacement app currently has no unit/browser test runner; add focused browser coverage for the no-transmission flow with this phase. Record unavailable environment prerequisites honestly. Keep local interaction evidence separate from live-service acceptance.
 
 Phase 04 closes when the Next.js application passes the matrix and the demo's outcome is clear throughout. A future deployed runtime must retain that behavior, but selecting or proving a host is not a prerequisite to developing the form. Real service activation, deployment and operational acceptance remain separate work.

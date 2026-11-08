@@ -40,20 +40,22 @@ Existing brand documents provide context. A historical “existing” or “read
 
 ## Asset inventory and gates
 
-The active asset source is the Next.js application. File paths here are relative to `C:\Users\chris\Onéra` unless linked to the shared artwork library.
+The active asset source is the rebuilt Next.js application in `website/`. Application file paths here are relative to that directory unless linked to the shared artwork library.
 
 | ID | Asset | Source/status | Use and fallback |
 | --- | --- | --- | --- |
-| A01 | Hero/archive photographs | Existing `public/images/hero-look.webp` and `archive-look.webp`. | Verify subject/provenance, preserve accurate alt text, reserve dimensions, use responsive delivery. |
-| A02 | Detail/fabric photograph | Existing `public/images/detail-fabric.webp`. | Establish garment association; do not relabel as a new interior or macro capture. |
-| A03 | Wordmark | Existing `src/components/wordmark.tsx`; [artwork and specification](../../../artifacts/wordmark/). | Preserve glyphs, weight, spacing, and proportions. Keep wordmark geometry separate from display-type experiments. |
-| A04 | Italic display font | Existing `src/app/fonts.ts`; italic delivery requires inspection/configuration. | Deliver a genuine licensed italic face before using italic decks. Record actual feature support; do not assume ligature/numeral support. |
+| A01 | Hero/archive photographs | **Not present in the rebuilt app.** Previous app images were lost with the source. | Request approved Onéra photography. Do not copy images from the Ziva Lagos visual reference. Until then, keep decorative CSS art clearly non-photographic. |
+| A02 | Detail/fabric photograph | **Not present in the rebuilt app.** | Defer garment detail/gallery modules until approved, correctly associated images are supplied. |
+| A03 | Wordmark | `website/public/brand/onera-wordmark-white.svg`; [artwork and specification](../../../artifacts/wordmark/). | Preserve glyphs, weight, spacing, and proportions. Keep wordmark geometry separate from display-type experiments. |
+| A04 | Display and italic fonts | `website/src/app/layout.tsx` loads Cormorant Garamond and Manrope with `next/font/google`; source font files from the lost app were not recovered. | Verify actual loaded styles/features and decide whether to retain build-time Google font loading or use approved local licensed files. Do not assume ligature/numeral support. |
 | A05 | Authentic macro photographs | **Required input; not supplied.** | Defer macro view; keep accurate current imagery/crops. |
 | A06 | Garment interior/label photography | **Required input; not supplied.** | Omit unavailable views, thumbnails, and captions. |
 | A07 | Ambient video/poster | **Required input; not supplied.** Former example filenames are not real footage. | Use the still hero until approved media meets Phase 03 gates. |
 | A08 | Packaging image/specification | **Required input; not supplied.** | Omit unsupported claims and imagery. Meaningful confirmed text may form a text-only module; a visual ceremony needs its approved image. Omit an empty module. |
 
 Historical files may supply useful originals if their provenance is verified. There is no dependency on maintaining, regenerating, or migrating the retired preview app.
+
+The client-provided Ziva Lagos site is a layout reference only. Its text, photographs, logo, product data, and promotional offer are not Onéra assets or content.
 
 ## Asset intake
 

@@ -12,26 +12,14 @@ This snapshot records what is locked into code and assets versus what remains op
 
 ## Development Status & Codebase Snapshot
 
-### Live Preview Site (`web-app-onera/`)
-* **Local Server:** Running on `http://127.0.0.1:3002` via [serve-preview.mjs](file:///z:/onera/web-app-onera/serve-preview.mjs) (Launcher: `Start Preview.cmd`).
-* **Source Checkout:** Decoupled static snapshot of the Next.js / Sanity / Shopify application at `C:\Users\chris\Onéra` (`http://127.0.0.1:3000`).
-* **Component Architecture:** Shared [components/header.html](file:///z:/onera/web-app-onera/components/header.html) and [components/footer.html](file:///z:/onera/web-app-onera/components/footer.html) synchronized across all pages via [scripts/sync-components.mjs](file:///z:/onera/web-app-onera/scripts/sync-components.mjs).
-* **Routes Implemented (6 total):**
-  - `/` (Home: Collection carousel, editorial quotes, selected look studies)
-  - `/collections/` (Collection archive index)
-  - `/collections/the-gate-of-horn/` (Autumn/Winter 26 debut collection page)
-  - `/garments/nyx-overcoat/` (Garment page with interactive gallery, detail zoom, sample swatches)
-  - `/garments/hypnos-dress/` (Garment page with ivory silk study, zoom, sample chips)
-  - `/philosophy/` (Brand philosophy and house background)
+### Rebuilt Website (`website/`)
 
-### QA & Browser Verification ([qa-browser.json](file:///z:/onera/artifacts/frontend-refinement/qa-browser.json))
-* **Responsive Testing:** Passed across all 6 routes at 320px (mobile), 767px (tablet), and 1440px (desktop).
-* **Layout Integrity:** 0 broken images, 0 document horizontal overflow issues across all viewports.
-* **Interactive Accessibility:**
-  - Collection index → collection → garment navigation loops verified.
-  - Color and size swatch selection with keyboard arrow navigation.
-  - Size guide modal opens with focus trap, dismisses with Escape, and returns focus to opener.
-  - Photo viewer supports image zoom, Escape close, and scroll restoration.
+The previous Next.js source was lost when the user's ChatGPT account was deactivated. The client chose to start again, and the replacement app is being developed in this repository's `website/` directory. The old static preview and its QA records are historical; they do not represent the rebuilt site.
+
+* **Stack:** Next.js 16.4.5, React 19.3, TypeScript 5, and Tailwind CSS 4.
+* **Current routes:** `/`, `/collections`, and `/philosophy`. Product and collection-detail pages are not yet implemented; no verified garment records or garment photography survived.
+* **Visual direction:** Dark-only site, olive `#413E07`, and the supplied wordmark. The client selected Ziva Lagos as a high-level storefront-layout reference; its copy, photography, products, branding, and promotional offer are not reused.
+* **Current checks:** Type-check, lint, production build, and HTTP smoke checks for the three routes passed on November 8, 2026. Responsive and interaction acceptance remains in progress.
 
 ---
 

@@ -5,7 +5,7 @@
 **Status:** Planned — implementation not started.  
 **Goal:** Make garment pages easier to inspect and understand through clear material, construction, fit, and photography information supported by real inputs.
 
-The confirmed application target is Next.js at `C:\Users\chris\Onéra`. Build the garment experience directly in that application using the [recorded decisions](../decisions-and-inputs.md).
+The rebuilt Next.js application is in `website/`. Build the garment experience there using the [recorded decisions](../decisions-and-inputs.md).
 
 ## 1. Prerequisites and selected direction
 
@@ -14,8 +14,8 @@ Read [Phase 00: source baseline](../phase-00-consolidation.md), [Phase 01](../ph
 | Input or dependency | Planning state | Consequence |
 | --- | --- | --- |
 | Primary application | Next.js confirmed by user | Implement directly in the sole application. |
-| Phase 00 source baseline | Planned | Inspect existing React components and checks; implement the needed gallery and dialogs in this phase. |
-| Phase 01 foundations | Planned | Use selected alabaster/type tokens and coordinate shared styles. |
+| Phase 00 source baseline | In progress | The replacement app currently has no garment pages, content layer, or commerce implementation. |
+| Phase 01 foundations | In progress | Use the approved dark-theme/type tokens and coordinate shared styles. |
 | Unconfirmed factual claims | User selected omission until real details arrive | Do not display invented specifications, placeholder facts, or unsupported sizing advice. |
 | Material and fit facts | Per-garment inputs pending | Optional information sections may remain absent while the interaction work progresses. |
 | Macro/interior photography | Approved files pending | Keep honest original/crop labels; no simulated photographic claims. |
@@ -23,36 +23,28 @@ Read [Phase 00: source baseline](../phase-00-consolidation.md), [Phase 01](../ph
 
 This phase can deliver the approved interaction scope with sparse factual content. It cannot claim a real macro/inside-out showcase is complete without appropriate approved assets.
 
-## 2. Verified source baseline
+## 2. Replacement-app baseline
 
-The source review on October 24, 2026 found two garment pages, Nyx Overcoat and Hypnos Dress.
-
-- Next.js `src/app/garments/[slug]/page.tsx` renders server-loaded description/material information, a gallery of `EditorialImage` components, and `ProductPurchase` when commerce permits it.
-- `src/lib/types.ts` currently models material as a string and gallery items as image metadata. It has no structured fabric weight, provenance, construction, or fit fields.
-- `src/lib/content.ts` projects and normalizes Sanity data; `src/lib/demo.ts` supplies separate explicit presentation records.
-- Existing Nyx demo copy says `Double faced wool · silk lining`; Hypnos says `Ivory silk`. These are inherited claims to audit, not confirmation of real product facts.
-- Available source-image filenames include `hero-look.webp`, `archive-look.webp`, and `detail-fabric.webp`; responsive derivatives are not additional photographic views.
-
-Recheck the source after Phase 00 and apply the user's instruction to omit unconfirmed factual content.
+The previous app source and its imagery were lost. The replacement currently has only the home, collections, and philosophy routes; it has no garment data/content layer, gallery, or commerce implementation. The names Nyx Overcoat and Hypnos Dress appear in planning documents only and do not establish current availability or product facts. No garment photographs are in the new app. Reconfirm both garments and acquire approved content/assets before rendering product cards or detail pages.
 
 ## 3. Target files and ownership
 
-Application paths below are relative to `C:\Users\chris\Onéra`.
+Application paths below are relative to `website/`.
 
 | File | State at review | Planned responsibility |
 | --- | --- | --- |
-| `src/app/garments/[slug]/page.tsx` | Existing | Render optional verified information and the garment gallery. |
-| `src/lib/types.ts` | Existing | Optional structured editorial facts and image-view metadata. |
-| `src/lib/content.ts` | Existing | Matching projection, raw types, normalization, and safe defaults for older records. |
-| `src/lib/demo.ts` | Existing | Honest presentation data; remove unsupported factual claims from visible demo content. |
-| `sanity/schemaTypes/garment.ts` | Existing | Optional authoring fields if that source-model extension is included; no connection or publication implied. |
-| `src/components/editorial-image.tsx` | Existing | Preserve optimized image loading, aspect reservation, and useful alt text. |
-| `src/components/product-purchase.tsx` | Existing | Preserve real commerce eligibility and variant behavior; do not reuse sample choices as Shopify identities. |
+| `src/app/garments/[slug]/page.tsx` | Planned | Render per-garment verified information and the gallery after content inputs exist. |
+| `src/lib/types.ts` | Planned | Optional structured editorial facts and image-view metadata. |
+| `src/lib/content.ts` | Planned | Content projection, types, normalization, and safe defaults if a CMS/source is selected. |
+| `src/lib/demo.ts` | Not implemented | Avoid adding mock product facts to public content; fixtures, if needed, stay isolated in tests. |
+| `sanity/schemaTypes/garment.ts` | Not implemented | Consider authoring fields only after source/CMS requirements are confirmed. |
+| `src/components/editorial-image.tsx` | Planned | Optimized, accessible image loading and aspect reservation when approved imagery is supplied. |
+| `src/components/product-purchase.tsx` | Not implemented | Do not activate commerce or variant behavior without a separate approved scope. |
 | `src/components/garment-gallery.tsx` | Proposed new component | Accessible React gallery/viewer; reuse suitable existing application primitives. |
 | `src/components/garment-size-guide.tsx` | Proposed new component, conditional on confirmed size information | Accessible guide with isolated development fixtures while facts are unavailable. |
 | `src/components/garment-specifications.tsx` | Proposed new component | Server-rendered optional confirmed facts, if a separate component improves reuse. |
 | `public/images/garments/<slug>/` | Proposed new asset directory | Approved macro/interior images only when supplied and recorded. |
-| Relevant content and browser checks under `tests/` | Existing suite; targeted additions if needed | Verify new data states and changed interaction behavior. |
+| Relevant content and browser checks under `tests/` | Not configured | Add focused checks with the first gallery/data implementation. |
 | `artifacts/beta-0.0.1/phase-02/` in the documentation workspace | Proposed evidence directory | Content audit, media manifest, screenshots, and results. |
 
 Keep interaction state and lifecycle in React components; preserve server-rendered information and image-loading behavior.
@@ -96,7 +88,7 @@ Record proposed fields separately for each garment in [content and assets](../co
 2. Use a semantic `<dl>` for label/value pairs. Group terms with their descriptions and use a clear heading for each section.
 3. Render each garment's own facts. Do not copy coat construction or fit guidance onto the dress.
 4. On wide layouts, align values without forcing long provenance into a narrow column. At narrow widths, stack rows and allow natural wrapping.
-5. Use Phase 01's canvas/type tokens. Preserve readable units and punctuation rather than presenting technical paragraphs in tiny uppercase text.
+5. Use Phase 01's dark-theme/type tokens. Preserve readable units and punctuation rather than presenting technical paragraphs in tiny uppercase text.
 6. Add construction text and an associated image only when both support the same claim. A generic fabric study does not prove the garment's interior structure.
 7. Suppress empty headings, separators, and drawers when all their content is omitted.
 8. Leave purchase/archive eligibility controls intact. This package does not enable commerce or convert demo selectors into real product options.
@@ -162,8 +154,8 @@ Deliver the per-garment content-state inventory, approved-media manifest, change
 
 ## 6. Application integration and runtime verification
 
-Run `npm run typecheck`, `npm run build`, and relevant existing content/interaction checks from `C:\Users\chris\Onéra`. Check the built application runtime on port `3000`, covering React hydration, content normalization, image loading, navigation, and dialog cleanup.
+Run `npm --prefix website run typecheck`, `npm --prefix website run lint`, and `npm --prefix website run build`. Add focused content/interaction checks with this work; no test suite was recovered. Check the built runtime on an available port, covering route rendering, image loading, navigation, and dialog cleanup.
 
-If optional Sanity fields are added, check schema build and older records without those fields. This does not connect a CMS, publish content, enable Shopify, or authorize checkout. Preserve the existing disabled-commerce behavior and its tests.
+If a CMS or optional fields are added, check schema/build behavior and records without those fields. This does not connect a CMS, publish content, enable Shopify, or authorize checkout; the replacement app has no commerce integration or inherited tests.
 
 Delivery follows the application's needs under D06. Evaluate hosting and sharing compatibility during deployment planning; core garment-interface development does not depend on a static export or a second application.

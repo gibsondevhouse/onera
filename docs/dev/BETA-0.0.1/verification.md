@@ -6,32 +6,25 @@
 
 ## 1. Target and evidence
 
-Verify the sole Next.js application, currently at `C:\Users\chris\Onéra`, in development and in its actual built runtime. The old preview app and its QA scripts are not acceptance targets.
+Verify the rebuilt Next.js application in `website/`, in development and in its actual built runtime. The old preview app and its QA scripts are not acceptance targets.
 
-Record source revision/recoverable snapshot, configuration, browser, viewport, and build. Do not describe a server as running without checking it. Store future evidence under `Z:\onera\artifacts\beta-0.0.1\<phase>\`; this is a proposed output location, not an existing test result.
+Record source revision/recoverable snapshot, configuration, browser, viewport, and build. Do not describe a server as running without checking it. Store future evidence under `artifacts/beta-0.0.1/<phase>/` at the repository root.
 
 Before changes, capture baseline routes/screenshots, meaningful check results, and known failures. Separate pre-existing problems from regressions. Read local instructions, installed framework guides, package scripts, and browser-test configuration before changing implementation.
 
 ## 2. Command gates
 
-From the canonical source, run applicable checks:
+From the repository root, run applicable checks for the app:
 
-```powershell
-Set-Location -LiteralPath 'C:\Users\chris\Onéra'
-npm run typecheck
-npm test
-npm run build
+```sh
+npm --prefix website run typecheck
+npm --prefix website run lint
+npm --prefix website run build
 ```
 
-The existing browser suite is available through:
+There is no browser suite configured yet. Add one with the first interactive feature; do not claim historical preview QA as current-app acceptance.
 
-```powershell
-npm run test:browser
-```
-
-Inspect its server ownership, fixtures, and browser availability first. Avoid duplicate servers or occupied ports. Add focused cases for the new gallery, demo flow, and motion cleanup; do not write tests that merely duplicate CSS values.
-
-Use `npm run dev` for development. Verify the built application with `npm run start` after a successful build; stop/reuse the development server or record an appropriate alternative port. Do not run both against the same port.
+Use `npm --prefix website run dev` for development. Verify the built application with `npm --prefix website run start` after a successful build; stop/reuse the development server or record an appropriate alternative port. Do not run both against the same port.
 
 Run relevant checks after each work package, then the full applicable checks for integrated stage acceptance. A static snapshot check cannot substitute for TypeScript, application build, or browser behavior.
 
@@ -49,6 +42,8 @@ Run relevant checks after each work package, then the full applicable checks for
 Inspect 320, 375, 767, 768, 1024, and 1440 CSS-pixel widths. Adjacent 767/768 checks exercise the breakpoint boundary. Include a short landscape viewport, text zoom, and long-content cases.
 
 Verify no document horizontal overflow, clipped controls/text, broken media, duplicate main landmarks, or unreadable navigation. Reserve media dimensions and use sensible headings. Save representative interactive states, not only landing-page screenshots.
+
+Verify the approved dark-only theme on every route and interactive state. Test contrast for text, icons, controls, borders, and focus indicators on each surface, and confirm the rendered palette does not switch with `prefers-color-scheme`.
 
 ## 4. Interaction acceptance
 
